@@ -20,6 +20,21 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
+  // IBAction + segue as only parameter - to unwind back to this VC
+  @IBAction func unwindToViewController(segue: UIStoryboardSegue) {
+
+  }
+
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    //if segue.identifier == "DataViewController" //one approach
+
+    if let dataViewController = segue.destinationViewController as? DataViewController {
+      dataViewController.view.backgroundColor = UIColor.orangeColor()
+      dataViewController.weight = 250
+      dataViewController.date = NSDate(timeIntervalSinceNow: -60 * 60 * 24 * 3)
+    }
+  }
+
 
 }
 

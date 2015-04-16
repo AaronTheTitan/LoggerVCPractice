@@ -13,6 +13,7 @@
 		91A2A91D1AE019690041B55D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91A2A91C1AE019690041B55D /* Images.xcassets */; };
 		91A2A9201AE019690041B55D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A2A91E1AE019690041B55D /* LaunchScreen.xib */; };
 		91A2A92C1AE019690041B55D /* LoggerVCPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A2A92B1AE019690041B55D /* LoggerVCPracticeTests.swift */; };
+		91A2A9361AE01BDC0041B55D /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A2A9351AE01BDC0041B55D /* DataViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		91A2A9251AE019690041B55D /* LoggerVCPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoggerVCPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A2A92A1AE019690041B55D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91A2A92B1AE019690041B55D /* LoggerVCPracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerVCPracticeTests.swift; sourceTree = "<group>"; };
+		91A2A9351AE01BDC0041B55D /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		91A2A9121AE019690041B55D /* LoggerVCPractice */ = {
 			isa = PBXGroup;
 			children = (
+				91A2A9351AE01BDC0041B55D /* DataViewController.swift */,
 				91A2A9151AE019690041B55D /* AppDelegate.swift */,
 				91A2A9171AE019690041B55D /* ViewController.swift */,
 				91A2A9191AE019690041B55D /* Main.storyboard */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91A2A9181AE019690041B55D /* ViewController.swift in Sources */,
+				91A2A9361AE01BDC0041B55D /* DataViewController.swift in Sources */,
 				91A2A9161AE019690041B55D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
