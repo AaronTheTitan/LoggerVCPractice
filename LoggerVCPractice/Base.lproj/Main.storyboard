@@ -51,6 +51,9 @@
                             <constraint firstItem="Cko-2K-L5R" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="yUJ-on-HWX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="Cko-2K-L5R" id="jUY-7r-FcU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

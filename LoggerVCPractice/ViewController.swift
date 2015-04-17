@@ -8,8 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, DataViewControllerDelegate {
 
+
+  @IBOutlet weak var textView: UITextView!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -30,10 +33,33 @@ class ViewController: UIViewController {
 
     if let dataViewController = segue.destinationViewController as? DataViewController {
       dataViewController.view.backgroundColor = UIColor.orangeColor()
+      dataViewController.delegate = self
       dataViewController.weight = 250
       dataViewController.date = NSDate(timeIntervalSinceNow: -60 * 60 * 24 * 3)
     }
   }
+
+
+  // Delegate methods for DataViewControllerDelegate
+  func dataViewController(dataViewController: DataViewController, didPickDate date: NSDate, weight: Double) {
+    println("ViewController.dataViewController didPickDate")
+
+    var massFormatter = NSMassFormatter()
+    let weightString = massFormatter.stringFromValue(weight, unit: NSMassFormatterUnit.Pound)
+
+    let dateFormatter = NSDateFormatter()
+    dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle
+
+    let dateString = dateFormatter.stringFromDate(date)
+
+    textView.text! += "\(dateString) weight: \(weightString)\n"
+
+  }
+
+  func dataViewControllerDidCancel(dataViewController: DataViewController) {
+    println("ViewController.dataViewController didCancel")
+  }
+
 
 
 }
